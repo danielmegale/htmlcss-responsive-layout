@@ -1,5 +1,5 @@
 *{
-	margin: 0;
+    margin: 0;
 	padding: 0;
 	box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
@@ -7,7 +7,7 @@
 .debug{}
 
 .debug .border{
-    border: 2px solid red;
+    border: 2px dashed red;
 }
 /* Generics */
 body{
@@ -16,7 +16,17 @@ body{
 header{
     background-color:#0084FD ;
 }
-
+img{
+    display: block;
+    max-width: 100%;
+}
+a{
+    text-decoration: none;
+    color: #fff;
+}
+.purple{
+    background-color: #9792E4;
+}
 /* Utilitis */
 .container{
     max-width: 540px;
@@ -26,6 +36,9 @@ header{
 .flex{
     display: flex;
 }
+.row{
+    width: 100%;
+}
 .space-between{
     justify-content: space-between;
 }
@@ -33,18 +46,60 @@ header{
     flex-wrap: wrap;
 }
 .col-large{
-    background-color: #B5DDFF;
-    border-radius: 50px;
-    height: 300px;
+    min-height: 200px;
+    min-width: 100%;
+    padding: 10px 0;
 }
-.col{
-    background-color: #B5DDFF;
-    border-radius: 50px;
+.col33, .col50{
+    min-height: 200px;
+    min-width: 100%;
+    padding: 10px 0;
 }
-.col-large img{
-    height: 100px;
+.card{
+    background-color: aqua;
+    min-height: 100%;
+    border-radius: 30px;
 }
 .padding{
     padding: 30px 0;
 }
+.white-col{
+    background-color:#fff;
+}
+.height-m{
+    height: 300px;
+}
+.navbar{
+    display: none;
+}
 /* Meta Query */
+/* Tablet */
+@media screen and (min-width:768px) {
+    .container{
+        max-width: 720px;
+    }
+   
+    .col33{
+        min-width:calc(100% / 3);
+        padding: 10px 10px;
+    }
+    .col-large{
+       min-width:calc(100% / 3 * 2);
+    }
+
+}
+/* Desktop */
+@media screen and (min-width:1200px) {
+    .container{
+        max-width:1140px ;
+    }
+    .navbar{
+        display: block;
+    }
+    .hamburger{
+        display: none;
+    }
+    .col50{
+        min-width: 50%;
+    }
+}
