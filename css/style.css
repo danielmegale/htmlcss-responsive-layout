@@ -50,7 +50,7 @@ a{
     min-width: 100%;
     padding: 10px 0;
 }
-.col33, .col50{
+.col, .col33, .col50, .col-card{
     min-height: 200px;
     min-width: 100%;
     padding: 10px 0;
@@ -78,7 +78,6 @@ a{
     .container{
         max-width: 720px;
     }
-   
     .col33{
         min-width:calc(100% / 3);
         padding: 10px 10px;
@@ -86,7 +85,10 @@ a{
     .col-large{
        min-width:calc(100% / 3 * 2);
     }
-
+    .col-card{
+        min-width:50%;
+        padding: 10px 10px;
+    }
 }
 /* Desktop */
 @media screen and (min-width:1200px) {
@@ -99,7 +101,13 @@ a{
     .hamburger{
         display: none;
     }
+    .col{
+        min-width: 100%;
+    }
     .col50{
         min-width: 50%;
+    }
+    .col-card{
+        min-width:calc(100% / 3);
     }
 }
